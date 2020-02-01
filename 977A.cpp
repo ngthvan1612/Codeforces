@@ -1,0 +1,16 @@
+///created: 30/May/2019 08:29:26
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+	int n, k;
+	cin >> n >> k;
+	while (k--) {
+		if (n % 10) n--;
+		else n /= 10;
+	}
+	cout << n;
+	return 0;
+}

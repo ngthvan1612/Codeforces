@@ -1,0 +1,65 @@
+debug.cpp: In instantiation of 'void debug_out(std::istream_iterator<std::__cxx11::basic_string<char> >, T, Args ...) [with T = std::vector<int>; Args = {}]':
+debug.cpp:49:12:   recursively required from 'void debug_out(std::istream_iterator<std::__cxx11::basic_string<char> >, T, Args ...) [with T = int; Args = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<int, std::allocator<int> >}]'
+debug.cpp:49:12:   required from 'void debug_out(std::istream_iterator<std::__cxx11::basic_string<char> >, T, Args ...) [with T = int; Args = {int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<int, std::allocator<int> >}]'
+debug.cpp:57:12:   required from 'void debug_process(std::__cxx11::string, Args ...) [with Args = {int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<int, std::allocator<int> >}; std::__cxx11::string = std::__cxx11::basic_string<char>]'
+debug.cpp:71:3:   required from here
+debug.cpp:48:51: error: no matching function for call to 'to_string(std::vector<int>&)'
+   cerr << "[DEBUG]: " << *it << " = " << to_string(a) << '\n';
+                                          ~~~~~~~~~^~~
+debug.cpp:27:8: note: candidate: std::__cxx11::string to_string(std::__cxx11::string)
+ string to_string(string s) { return "\"" + s + "\""; }
+        ^~~~~~~~~
+debug.cpp:27:8: note:   no known conversion for argument 1 from 'std::vector<int>' to 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}'
+debug.cpp:30:8: note: candidate: template<class T> std::__cxx11::string to_string(std::initializer_list<_Tp>)
+ string to_string(initializer_list<T> a) {
+        ^~~~~~~~~
+debug.cpp:30:8: note:   template argument deduction/substitution failed:
+debug.cpp:48:51: note:   'std::vector<int>' is not derived from 'std::initializer_list<_Tp>'
+   cerr << "[DEBUG]: " << *it << " = " << to_string(a) << '\n';
+                                          ~~~~~~~~~^~~
+In file included from d:\c++\lib\gcc\mingw32\6.3.0\include\c++\string:52:0,
+                 from d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from d:\c++\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from d:\c++\lib\gcc\mingw32\6.3.0\include\c++\istream:38,
+                 from d:\c++\lib\gcc\mingw32\6.3.0\include\c++\sstream:38,
+                 from d:\c++\lib\gcc\mingw32\6.3.0\include\c++\complex:45,
+                 from d:\c++\lib\gcc\mingw32\6.3.0\include\c++\ccomplex:39,
+                 from d:\c++\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:52,
+                 from debug.cpp:1:
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5507:3: note: candidate: std::__cxx11::string std::__cxx11::to_string(long double)
+   to_string(long double __val)
+   ^~~~~~~~~
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5507:3: note:   no known conversion for argument 1 from 'std::vector<int>' to 'long double'
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5498:3: note: candidate: std::__cxx11::string std::__cxx11::to_string(double)
+   to_string(double __val)
+   ^~~~~~~~~
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5498:3: note:   no known conversion for argument 1 from 'std::vector<int>' to 'double'
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5489:3: note: candidate: std::__cxx11::string std::__cxx11::to_string(float)
+   to_string(float __val)
+   ^~~~~~~~~
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5489:3: note:   no known conversion for argument 1 from 'std::vector<int>' to 'float'
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5483:3: note: candidate: std::__cxx11::string std::__cxx11::to_string(long long unsigned int)
+   to_string(unsigned long long __val)
+   ^~~~~~~~~
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5483:3: note:   no known conversion for argument 1 from 'std::vector<int>' to 'long long unsigned int'
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5477:3: note: candidate: std::__cxx11::string std::__cxx11::to_string(long long int)
+   to_string(long long __val)
+   ^~~~~~~~~
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5477:3: note:   no known conversion for argument 1 from 'std::vector<int>' to 'long long int'
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5471:3: note: candidate: std::__cxx11::string std::__cxx11::to_string(long unsigned int)
+   to_string(unsigned long __val)
+   ^~~~~~~~~
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5471:3: note:   no known conversion for argument 1 from 'std::vector<int>' to 'long unsigned int'
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5466:3: note: candidate: std::__cxx11::string std::__cxx11::to_string(long int)
+   to_string(long __val)
+   ^~~~~~~~~
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5466:3: note:   no known conversion for argument 1 from 'std::vector<int>' to 'long int'
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5460:3: note: candidate: std::__cxx11::string std::__cxx11::to_string(unsigned int)
+   to_string(unsigned __val)
+   ^~~~~~~~~
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5460:3: note:   no known conversion for argument 1 from 'std::vector<int>' to 'unsigned int'
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5455:3: note: candidate: std::__cxx11::string std::__cxx11::to_string(int)
+   to_string(int __val)
+   ^~~~~~~~~
+d:\c++\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5455:3: note:   no known conversion for argument 1 from 'std::vector<int>' to 'int'
